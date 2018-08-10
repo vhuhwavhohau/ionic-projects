@@ -1,0 +1,116 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Coffee Ordering 
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-item>
+    <ion-label floating>Name</ion-label>
+    <ion-input [(ngModel)]="Name" type= "text"></ion-input>
+  </ion-item>
+  <h1 id="h1">Toppings</h1>
+
+  <ion-list>
+
+    <ion-item>
+      <ion-label>Whipped Cream</ion-label>
+      <ion-checkbox [(ngModel)]="WhippedCream"></ion-checkbox>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label>Chocolate</ion-label>
+      <ion-checkbox [(ngModel)]="Chocolate"></ion-checkbox>
+    </ion-item>
+  
+  
+  </ion-list>
+<h2>Quantity</h2>
+  <ion-row>
+    <ion-col>
+      <button (click) = "minus()" ion-button medium><b>-</b></button>
+    </ion-col>
+    <ion-col><p>{{quantity}}</p></ion-col>
+    <ion-col>
+        <button (click) = "plus()" ion-button medium><b>+</b></button>
+      </ion-col>
+  </ion-row>
+<h1 id="h101">Order Summary</h1>
+<span>
+  <h1 id="p102">Name {{Name}}</h1>
+  <h1 id= "p102">{{item}} </h1>
+  <h1 id= "p102">{{item1}} </h1>
+  <h1 id= "p102">Qunatity: {{quantity}}</h1>
+  <h1 id= "p102">Total: R{{total}}</h1>
+  <h1 id= "p102">Thank you</h1>
+  
+  
+</span>
+
+  
+  <div id = " bottom">
+      <button ion-button id="btnReset" (click) = "Reset()">Reset</button>
+      <button id="btnClick" ion-button (click) = "order()">order</button>
+  </div>
+  
+
+</ion-content>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--   
+<div id="div" *ngIf = "value == 1" >
+    <p >{{Name}}</p>
+    <p >Cappuccino</p>
+    <p >{{quantity}}</p>
+    <p >{{total}}</p>
+    <p >thank you</p>
+</div>
+
+<div id="div" *ngIf = "value == 2" >
+    <p >hello world</p>
+    <p >{{Name}}</p>
+    <p >Cappuccino</p>
+    <p >{{quantity}}</p>
+    <p >{{total}}</p>
+    <p >thank you</p>
+</div>
+
+<div id="div" *ngIf = "value == 3" >
+    <p >hello world</p>
+    <p >{{Name}}</p>
+    <p >Chocolate</p>
+    <p >{{quantity}}</p>
+    <p >{{total}}</p>
+    <p >thank you</p>
+</div>
+
+<div id="div" *ngIf = "value == 3" >
+    <p >hello world</p>
+    <p >{{Name}}</p>
+    <p >Espresso</p>
+    <p >{{quantity}}</p>
+    <p >{{total}}</p>
+    <p >thank you</p>
+</div> -->
